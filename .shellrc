@@ -1,0 +1,52 @@
+# Color definition
+COLOR_NONE="\[\e[00m\]"
+
+COLOR_RED="\[\e[01;31m\]"
+COLOR_GREEN="\[\e[01;32m\]"
+COLOR_YELLOW="\[\e[01;33m\]"
+COLOR_BLUE="\[\e[01;34m\]"
+
+COLOR_RED_BACK="\[\e[41m\]"
+COLOR_GREEN_BACK="\[\e[42m\]"
+COLOR_YELLOW_BACK="\[\e[43m\]"
+COLOR_BLUE_BACK="\[\e[44m\]"
+
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+fi  
+stty -ixon
+
+# Alias
+eval "`dircolors -b`"
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -la'
+alias la='ls -a'
+alias l='ls -CF'
+alias cl='clear'
+alias gitpush='git repack && git prune && git push origin master'
+
+alias chr='ps -e | grep -i'
+alias ins='sudo pacman -S'
+alias ajour='yaourt -Syu --aur '
+alias finger_user='ypcat passwd | grep'
+
+alias ortho='aspell --encoding=utf-8 --lang=fr_FR.UTF-8 -c'
+alias ortho_en='aspell --encoding=utf-8 --lang=en_US.UTF-8 -t -c'
+
+# Environment
+export PATH=~/bin:$PATH
+export EDITOR=nano
+export PYTHONSTARTUP=~/.pystartup
+
+export WINEDLLOVERRIDES=winmenubuilder.exe=d
+
+utf8-to-latin(){
+  iconv -f UTF8 "$1" -t ISO8859-15 -c > "$1.tr.srt"
+}
