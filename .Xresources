@@ -1,0 +1,65 @@
+XTerm*vt100.translations: #override \n\
+  Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  Lock Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  Lock @Num_Lock Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  @Num_Lock Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  <Btn4Down>: string(0x1b) string("[5S") \n\
+  Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+  Lock Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+  Lock @Num_Lock Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+  @Num_Lock Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+ <Btn5Down>: string(0x1b) string("[5T") \n\
+  Shift <KeyPress> Prior: string(0x1b) string("[25S") \n\
+  Shift <KeyPress> Next: string(0x1b) string("[25T") \n
+
+
+xterm*geometry:           80x25
+xterm*faceName:           terminus:pixelsize=16
+!xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*dynamicColors:      true
+xterm*utf8:               2
+!xterm*eightBitInput:      true
+xterm*saveLines:          0
+!xterm*termName:           xterm-256color
+!xterm*scrollKey:          true
+!xterm*scrollTtyOutput:    false
+xterm*scrollBar:          false
+!xterm*rightScrollBar:     true
+!xterm*jumpScroll:         true
+!xterm*multiScroll:        true
+!xterm*toolBar:            false
+
+xterm*background: #000000
+xterm*foreground: #ffffff
+
+rxvt*background: #000000
+rxvt*foreground: #ffffff
+
+urxvt*background: #000000
+urxvt*foreground: #ffffff
+
+rxvt*scrollBar:          false
+URxvt.scrollBar: false
+
+urxvt*saveLines:	0
+rxvt*saveLines:        0
+
+URxvt*font:					xft:DejaVu Sans Mono-12
+
+URxvt*vt100.translations: #override \n\
+  Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  Lock Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  Lock @Num_Lock Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  @Num_Lock Ctrl <Btn4Down>: string(0x1b) string("[25S") \n\
+  <Btn4Down>: string(0x1b) string("[5S") \n\
+  Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+  Lock Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+  Lock @Num_Lock Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+  @Num_Lock Ctrl <Btn5Down>: string(0x1b) string("[25T") \n\
+ <Btn5Down>: string(0x1b) string("[5T") \n\
+  Shift <KeyPress> Prior: string(0x1b) string("[25S") \n\
+  Shift <KeyPress> Next: string(0x1b) string("[25T") \n
+
+
+URxvt*secondaryScroll: true
+

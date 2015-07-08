@@ -1,0 +1,467 @@
+;; Object render/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "render/"
+  :tables (list 
+   (semanticdb-table "Render_opengl.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sstream" include (:system-flag t) nil [1837 1855])
+            ("cmath" include (:system-flag t) nil [1856 1872])
+            ("QFile" include (:system-flag t) nil [1882 1898])
+            ("QDate" include (:system-flag t) nil [1929 1945])
+            ("QTimer" include (:system-flag t) nil [1946 1963])
+            ("interface/resource.hpp" include nil nil [1973 2006])
+            ("interface/Interface.hpp" include nil nil [2007 2041])
+            ("common/common.hpp" include nil nil [2051 2079])
+            ("common/Info.hpp" include nil nil [2080 2106])
+            ("common/Message.hpp" include nil nil [2107 2136])
+            ("render/Ruler.hpp" include nil nil [2146 2173])
+            ("render/Render_opengl.hpp" include nil nil [2174 2209])
+            ("render/Render.hpp" include nil nil [2210 2238])
+            ("GL/glu.h" include (:system-flag t) nil [2248 2267])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2268 2288])
+            ("message" variable (:constant-flag t) nil [2299 2306])
+            ("Render_opengl::DRAWING_TIMER_DEFAULT" variable
+               (:constant-flag t
+                :type "int")
+                nil [2382 2434])
+            ("Render_opengl" function
+               (:constructor-flag t
+                :parent "Render_opengl"
+                :arguments 
+                  ( ("core" variable
+                       (:pointer 1
+                        :type ("Core" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2589 2600])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2601 2617])
+                    ("format" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QGLFormat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2618 2642]))                  
+                :type ("Render_opengl" type (:type "class") nil nil))
+                nil [2560 3295])
+            ("release" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [3298 3619])
+            ("initializeGL" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [3746 3920])
+            ("resizeGL" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("width" variable (:type "int") (reparse-symbol arg-sub-list) [3952 3962])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [3963 3974]))                  
+                :type "void")
+                nil [3922 4631])
+            ("paintGL" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [4634 13109])
+            ("build" function
+               (:parent "Render_opengl"
+                :type "bool")
+                nil [13233 13926])
+            ("unbuild" function
+               (:parent "Render_opengl"
+                :type "bool")
+                nil [13930 15479])
+            ("draw_wait" function
+               (:parent "Render_opengl"
+                :type ("GLuint" type (:type "class") nil nil))
+                nil [15621 17465])
+            ("call_ruler" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [17468 19656])
+            ("set_color" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("r" variable (:type "float") (reparse-symbol arg-sub-list) [19694 19702])
+                    ("g" variable (:type "float") (reparse-symbol arg-sub-list) [19703 19711])
+                    ("b" variable (:type "float") (reparse-symbol arg-sub-list) [19712 19720]))                  
+                :type "void")
+                nil [19664 19768])
+            ("draw_text" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("x" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19800 19820])
+                    ("y" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19821 19841])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19842 19860])
+                    ("s" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19861 19881]))                  
+                :type "void")
+                nil [19770 20238])
+            ("draw_quad" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("x" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20271 20285])
+                    ("y" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20286 20300])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20301 20319])
+                    ("w" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20320 20334])
+                    ("h" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20335 20349]))                  
+                :type "void")
+                nil [20241 20971])
+            ("draw_triangle" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21007 21020])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21021 21034])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21069 21082])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21083 21096]))                  
+                :type "void")
+                nil [20973 21099])
+            ("draw_line" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("x1" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21131 21146])
+                    ("y1" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21147 21162])
+                    ("x2" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21163 21178])
+                    ("y2" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21179 21194])
+                    ("z" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21195 21209]))                  
+                :type "void")
+                nil [21101 21754])
+            ("draw_circle" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21788 21806])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21807 21825])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21826 21844])
+                    ("" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21845 21863]))                  
+                :type "void")
+                nil [21756 21866])
+            ("start_draw" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [21869 22101])
+            ("start_draw_containers" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [22103 22444])
+            ("draw_container" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22481 22500])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22501 22520])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22521 22540])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22541 22560]))                  
+                :type "void")
+                nil [22446 22568])
+            ("draw_container_text" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22610 22629])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22630 22649])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22650 22669]))                  
+                :type "void")
+                nil [22570 22672])
+            ("end_draw_containers" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [22674 22784])
+            ("start_draw_states" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [22786 23107])
+            ("draw_state" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23140 23159])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23160 23179])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23180 23199])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23200 23219])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_col" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23220 23239])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_col" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23240 23259])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_col" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23260 23279]))                  
+                :type "void")
+                nil [23109 23282])
+            ("end_draw_states" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [23284 23393])
+            ("start_draw_arrows" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [23395 23461])
+            ("draw_arrow" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("start_time" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23494 23523])
+                    ("end_time" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23524 23551])
+                    ("start_height" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23552 23583])
+                    ("end_height" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23584 23613])
+                    ("red" variable
+                       (:constant-flag t
+                        :type ("Element_col" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23614 23636])
+                    ("green" variable
+                       (:constant-flag t
+                        :type ("Element_col" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23637 23661])
+                    ("blue" variable
+                       (:constant-flag t
+                        :type ("Element_col" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23662 23685]))                  
+                :type "void")
+                nil [23463 24137])
+            ("end_draw_arrows" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [24139 24204])
+            ("start_draw_events" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [24206 24272])
+            ("draw_event" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("time" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24305 24328])
+                    ("height" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24329 24354])
+                    ("container_height" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24356 24391]))                  
+                :type "void")
+                nil [24274 24816])
+            ("end_draw_events" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [24819 24884])
+            ("start_draw_counter" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [24886 25189])
+            ("draw_counter" function
+               (:parent "Render_opengl"
+                :arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25224 25243])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("Element_pos" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25244 25263]))                  
+                :type "void")
+                nil [25191 25266])
+            ("end_draw_counter" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [25268 25346])
+            ("start_ruler" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [25348 25408])
+            ("end_ruler" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [25410 25469])
+            ("end_draw" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [25471 25504])
+            ("draw_stored_texts" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [25507 25549])
+            ("draw_stored_arrows" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [25551 28009])
+            ("draw_stored_circles" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [28011 30219])
+            ("show_minimap" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [32513 32785])
+            ("clear_arrow" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [33073 33131])
+            ("clear_text" function
+               (:parent "Render_opengl"
+                :type "void")
+                nil [33133 33189]))          
+    :file "Render_opengl.cpp"
+    :pointmax 33190
+    :fsize 33190
+    :lastmodtime '(20449 55047)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("message" . 
+              ((punctuation "*" 2307 . 2308) (symbol "Message" 2308 . 2315) (punctuation ":" 2315 . 2316) (punctuation ":" 2316 . 2317) (symbol "get_instance" 2317 . 2329) (semantic-list "()" 2329 . 2331) (punctuation "<" 2332 . 2333) (punctuation "<" 2333 . 2334) (string "\"(\"" 2335 . 2338) (punctuation "<" 2339 . 2340) (punctuation "<" 2340 . 2341) (symbol "__FILE__" 2342 . 2350) (punctuation "<" 2351 . 2352) (punctuation "<" 2352 . 2353) (string "\" l.\"" 2354 . 2359) (punctuation "<" 2360 . 2361) (punctuation "<" 2361 . 2362) (symbol "__LINE__" 2363 . 2371) (punctuation "<" 2372 . 2373) (punctuation "<" 2373 . 2374) (string "\"): \"" 2375 . 2380)))
+          )
+
+    )
+   (semanticdb-table "render_stats_opengl.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstdio" include (:system-flag t) nil [1843 1860])
+            ("string" include (:system-flag t) nil [1861 1878])
+            ("common/common.hpp" include nil nil [1888 1916])
+            ("common/Info.hpp" include nil nil [1917 1943])
+            ("interface/resource.hpp" include nil nil [1953 1986])
+            ("interface/Interface.hpp" include nil nil [1987 2021])
+            ("core/Core.hpp" include nil nil [2022 2046])
+            ("render/render_stats_opengl.hpp" include nil nil [2056 2097])
+            ("GL/glu.h" include (:system-flag t) nil [2107 2126])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2127 2147])
+            ("Render_stats_opengl" function
+               (:constructor-flag t
+                :parent "Render_stats_opengl"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2190 2206]))                  
+                :type ("Render_stats_opengl" type (:type "class") nil nil))
+                nil [2149 2396])
+            ("Render_stats_opengl" function
+               (:destructor-flag t
+                :parent "Render_stats_opengl"
+                :type "void")
+                nil [2398 2492])
+            ("initializeGL" function
+               (:parent "Render_stats_opengl"
+                :type "void")
+                nil [2494 2566])
+            ("resizeGL" function
+               (:parent "Render_stats_opengl"
+                :arguments 
+                  ( ("width" variable (:type "int") (reparse-symbol arg-sub-list) [2604 2614])
+                    ("height" variable (:type "int") (reparse-symbol arg-sub-list) [2615 2626]))                  
+                :type "void")
+                nil [2569 2865])
+            ("paintGL" function
+               (:parent "Render_stats_opengl"
+                :type "void")
+                nil [2867 4352])
+            ("translate_y" function
+               (:parent "Render_stats_opengl"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [4392 4402]))                  
+                :type "void")
+                nil [4354 4557])
+            ("translate_x" function
+               (:parent "Render_stats_opengl"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [4597 4607]))                  
+                :type "void")
+                nil [4559 4807])
+            ("set_total_height" function
+               (:parent "Render_stats_opengl"
+                :arguments 
+                  ( ("h" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4852 4866]))                  
+                :type "void")
+                nil [4809 4894])
+            ("set_height_for_one_container" function
+               (:parent "Render_stats_opengl"
+                :arguments 
+                  ( ("h" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4951 4965]))                  
+                :type "void")
+                nil [4896 5002])
+            ("set_total_width" function
+               (:parent "Render_stats_opengl"
+                :arguments 
+                  ( ("w" variable (:type ("Element_pos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5046 5060]))                  
+                :type "void")
+                nil [5004 5087])
+            ("clear" function
+               (:parent "Render_stats_opengl"
+                :type "void")
+                nil [5089 5272]))          
+    :file "render_stats_opengl.cpp"
+    :pointmax 5273
+    :fsize 5273
+    :lastmodtime '(20449 55078)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!data_local1!vite_1157!src!render!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,194 @@
+;; Object statistics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "statistics/"
+  :tables (list 
+   (semanticdb-table "DrawVDiagram.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DRAW_VDIAGRAM_HPP" variable (:constant-flag t) nil [1870 1887])
+            ("DrawVDiagram" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2045 2052])
+                    ("DrawVDiagram" function
+                       (:constructor-flag t
+                        :type ("DrawVDiagram" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2110 2247])
+                    ("DrawVDiagram" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2303 2334])
+                    ("build" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("draw_object" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2636 2651])
+                            ("containers_to_print" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Container" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2652 2697]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2617 3397])
+                    ("draw_container_name" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("draw_object" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3708 3723])
+                            ("container_id" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3724 3747]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3675 4168])
+                    ("draw_diagram" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("draw_object" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4452 4467])
+                            ("container_id" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4468 4491]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4426 7323])
+                    ("draw_legend" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("draw_object" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7649 7664])
+                            ("container_id" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [7665 7688]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7624 9335])
+                    ("get_max_percentage" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("temp_states" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("EntityValue" type
+                                             (:pointer 1
+                                              :constant-flag t)
+                                              nil nil)
+                                          ("stats" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9672 9722]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [9638 10173])
+                    ("set_geometrical_informations" function (:type "void") (reparse-symbol classsubparts) [10287 10764]))                  
+                :superclasses 
+                  ( ("DrawStats" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [1979 10768]))          
+    :file "DrawVDiagram.hpp"
+    :pointmax 10778
+    :fsize 10766
+    :lastmodtime '(20449 56086)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DRAW_VDIAGRAM_HPP")
+          )
+
+    )
+   (semanticdb-table "DrawCounter.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DRAW_COUNTER_HPP" variable (:constant-flag t) nil [1868 1884])
+            ("_MAX_HEIGHT_AXIS_DEFAULT" variable (:constant-flag t) nil [1894 1918])
+            ("_MAX_WIDTH_AXIS_DEFAULT" variable (:constant-flag t) nil [1966 1989])
+            ("DrawCounter" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [2144 2152])
+                    ("_nb_variables_already_print" variable (:type "int") (reparse-symbol classsubparts) [2157 2189])
+                    ("_start_x" variable (:type "double") (reparse-symbol classsubparts) [2222 2238])
+                    ("_start_y" variable (:type "double") (reparse-symbol classsubparts) [2243 2259])
+                    ("_size_for_one_variable" variable (:type "double") (reparse-symbol classsubparts) [2320 2350])
+                    ("_pos_x_container_name" variable (:type "double") (reparse-symbol classsubparts) [2355 2384])
+                    ("_pos_y_container_name" variable (:type "double") (reparse-symbol classsubparts) [2389 2418])
+                    ("_x_axis_length" variable (:type "double") (reparse-symbol classsubparts) [2423 2445])
+                    ("_y_axis_length" variable (:type "double") (reparse-symbol classsubparts) [2450 2472])
+                    ("public" label nil (reparse-symbol classsubparts) [2474 2481])
+                    ("DrawCounter" function
+                       (:constructor-flag t
+                        :type ("DrawCounter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2539 3029])
+                    ("DrawCounter" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3085 3115])
+                    ("build" function
+                       (:arguments 
+                          ( ("draw_object" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3410 3425])
+                            ("containers_to_print" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Container" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3426 3471]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3399 4402])
+                    ("draw_diagram" function
+                       (:arguments 
+                          ( ("draw_object" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4738 4753])
+                            ("container_id" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4754 4777])
+                            ("var" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Variable" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4778 4798]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4720 11022]))                  
+                :superclasses 
+                  ( ("DrawStats" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [2084 11030]))          
+    :file "DrawCounter.hpp"
+    :pointmax 11039
+    :fsize 11039
+    :lastmodtime '(20449 55158)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DRAW_COUNTER_HPP")
+          ("_MAX_HEIGHT_AXIS_DEFAULT" . 
+              ((symbol "_HEIGHT_FOR_ONE_CONTAINER_DEFAULT" 1919 . 1952) (punctuation "-" 1953 . 1954) (number "50" 1955 . 1957)))
+          ("_MAX_WIDTH_AXIS_DEFAULT" . ((number "350" 1991 . 1994)))
+          )
+
+    )
+   )
+  :file "!data_local1!vite_1157!src!statistics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

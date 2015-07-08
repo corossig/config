@@ -1,0 +1,33 @@
+[user]
+	name = Corentin Rossignon
+	email = corentin.rossignon@total.com
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+
+[alias]
+	co = checkout
+	ci = !git add . && git commit -a -m
+	cm = commit -m
+	pp = !git repack && git prune && git push origin master
+
+[push]
+	default = simple
+        
+[core]
+        pager = less -r
+#	gitproxy = /home/j0383621/bin/proxy_git
+
+[config]
+	gitUseHttps = true
+[log]
+	abbrevCommit = true
+[url "git://anongit.kde.org/"]
+	insteadOf = kde:
+[url "git@git.kde.org:"]
+	pushInsteadOf = kde:

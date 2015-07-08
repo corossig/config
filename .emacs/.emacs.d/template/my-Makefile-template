@@ -1,0 +1,18 @@
+EXECUTABLE=
+
+CC = gcc
+
+CFLAGS = -O0 -g -Wall -std=c99
+LDFLAGS =
+
+OUTFILE = $(EXECUTABLE)
+
+OBJS = $(EXECUTABLE).o
+
+$(OUTFILE) : $(OBJS)
+
+%.o: %.c
+
+clean :
+rm -f $(OUTFILE) $(OBJS) *~ *.o
+

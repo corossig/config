@@ -1,0 +1,75 @@
+cmake_minimum_required(VERSION 2.6)
+project($DIR$)
+
+list(APPEND LINK_LIB pthread rt)
+list(APPEND ALTERNATIVE_ROOT /users_local/j0383621/root/)
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE "debug")
+#  set(CMAKE_BUILD_TYPE "release")
+endif(NOT CMAKE_BUILD_TYPE)
+
+if(UNIX)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wall -Wextra -Wshadow -Wno-unused-parameter -pedantic")
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -O0 -g3")
+  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O3")
+endif(UNIX)
+
+## ---
+## --- Use: (get_lib <library_name> [include_file_1 include_file_2 ...]
+## ---
+macro(get_lib LIB_NAME)
+  find_library(${LIB_NAME}_LIBRARY ${LIB_NAME}
+    PATHS ${ALTERNATIVE_ROOT} /usr/ ENV LD_LIBRARY_PATH
+    PATH_SUFFIXES lib
+  )
+  list(APPEND LINK_LIB ${${LIB_NAME}_LIBRARY})
+
+  foreach(INCLUDE_FILE ${ARGN})
+    find_path(${LIB_NAME}_INCLUDE_DIRS ${INCLUDE_FILE}
+      PATHS ${ALTERNATIVE_ROOT} /usr/ ENV INCLUDE
+      PATH_SUFFIXES include/${LIB_NAME} include/
+    )
+    include_directories(${${LIB_NAME}_INCLUDE_DIRS})
+  endforeach()
+endmacro(get_lib)
+
+#get_lib(blas)
+
+## Source files
+file(
+  GLOB
+  source_files
+  src/*.cpp
+  src/*.hpp
+  src/*.h
+)
+
+file(
+  GLOB
+  test_files
+  test/*.cpp
+)
+
+include_directories(include)
+
+add_library(${PROJECT_NAME} STATIC ${source_files})
+target_link_libraries(${PROJECT_NAME} ${LINK_LIB})
+
+foreach(f ${test_files})
+  GET_FILENAME_COMPONENT(f2 ${f} NAME)
+  string(REPLACE ".cpp" ".exe" executable ${f2})
+  add_executable(${executable} ${f})
+  target_link_libraries(${executable} ${LINK_LIB} ${PROJECT_NAME})
+  #message(${f2} " => " ${executable})
+endforeach(f)
+
+## Clean command
+if("${CMAKE_GENERATOR}" MATCHES "Make")
+  add_custom_target(clean_all rm -rf CMakeFiles CMakeCache.txt cmake_install.cmake Makefile
+    html *.svg *.viz *.dot log.txt *.paje
+    WORKING_DIRECTORY ${CMAKE_CURRENT_DIR})
+
+  add_custom_target(debug cmake . -DCMAKE_BUILD_TYPE=debug)
+  add_custom_target(release cmake . -DCMAKE_BUILD_TYPE=release)
+endif("${CMAKE_GENERATOR}" MATCHES "Make")

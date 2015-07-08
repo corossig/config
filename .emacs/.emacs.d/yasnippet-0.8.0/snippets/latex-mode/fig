@@ -1,0 +1,11 @@
+# name: \includegraphics{"img.svg"}
+# key: fig
+# --
+%   (-_-)   %
+\begin{figure}[t!]
+  \centering
+  \includegraphics[width=\textwidth]{${1:"img.svg"}}
+  \caption{${2:description}}
+  \label{${3:label}}
+\end{figure}
+$0

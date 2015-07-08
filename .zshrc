@@ -44,6 +44,11 @@ case `hostname` in
     lulu*)
         HOST_COLOR="${REVERSE}${MAGENTA}"
         ;;
+    pandev*|rostand*)
+        export FPATH=/usr/share/zsh/site-functions:/usr/share/zsh/4.3.6/functions
+        HOST_COLOR="${REVERSE}${YELLOW}"
+        export HISTFILE="$HOME/.zsh_rostand_history"
+        ;;
     devel*)
         HOST_COLOR="${REVERSE}${GREEN}"
         ;;
@@ -79,14 +84,15 @@ bindkey '\e[3~' delete-char
 bindkey '\e[4~' end-of-line
 bindkey '\177' backward-delete-char
 bindkey '\e[2~' overwrite-mode
-  
+
 bindkey "\e[7~" beginning-of-line
 bindkey "\e[H" beginning-of-line
 bindkey "\e[8~" end-of-line
 bindkey "\e[F" end-of-line
 bindkey "\eOH" beginning-of-line
 bindkey "\eOF" end-of-line
-  
+
 bindkey "^R" history-incremental-search-backward
 ulimit -c 0
 
+[ -f ~/.software/module/init/zsh ] && source ~/.software/module/init/zsh

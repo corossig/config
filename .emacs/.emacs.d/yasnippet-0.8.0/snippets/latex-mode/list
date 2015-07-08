@@ -1,0 +1,6 @@
+# name: \begin{itemize} ... \end{itemize}
+# key: list
+# --
+\begin{itemize}
+$0
+\end{itemize}
