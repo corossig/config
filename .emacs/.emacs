@@ -46,7 +46,7 @@
 
 (require 'autoinsert)
 (auto-insert-mode)  ;;; Adds hook to find-files-hook
-(setq auto-insert-directory "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/template/")
+(setq auto-insert-directory "~/.emacs.d/template/")
 (setq auto-insert-query nil)
 (define-auto-insert "\\.c$" ["my-c-template.c" prepare-file])
 (define-auto-insert "\\.cpp" ["my-cpp-template.cpp" prepare-file])
@@ -89,7 +89,7 @@
         (replace-match (file-name-nondirectory (directory-file-name (file-name-directory (expand-file-name buffer-file-name)))) t
                        )))))
 
-(add-to-list 'load-path (expand-file-name "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/mode"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/mode"))
 (autoload 'cmake-mode "cmake-mode" "Major mode for editing CMakeList." t)
 (autoload 'cuda-mode "cuda-mode" "Major mode for CUDA." t)
 (autoload 'parsec-mode "parsec-mode" "Major mode for editing Parsec." t)
@@ -206,7 +206,7 @@
 (setq auto-mode-alist (cons '("\\.tex$" . LaTeX-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("CMakeLists.txt" . cmake-mode) auto-mode-alist))
 
-(add-to-list 'load-path "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/site-lisp/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-billw)
@@ -332,12 +332,12 @@
  '(show-paren-mode t))
 
 (add-to-list 'load-path
-              "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/yasnippet-0.8.0")
+              "~/.emacs.d/yasnippet-0.8.0")
 (require 'yasnippet)
 
 
 (add-to-list 'load-path
-              "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/markdown-mode-2.0")
+              "~/.emacs.d/markdown-mode-2.0")
 (require 'markdown-mode)
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
