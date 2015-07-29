@@ -332,12 +332,12 @@
  '(show-paren-mode t))
 
 (add-to-list 'load-path
-              "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/yasnippet-0.8.0")
+              "~/.emacs.d/yasnippet-0.8.0")
 (require 'yasnippet)
 
 
 (add-to-list 'load-path
-              "/data/pau901/VDG_GSI/CORENTIN/config/.emacs/.emacs.d/markdown-mode-2.0")
+              "~/.emacs.d/markdown-mode-2.0")
 (require 'markdown-mode)
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
